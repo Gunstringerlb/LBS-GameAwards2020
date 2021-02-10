@@ -133,9 +133,12 @@ GameObject:
   m_Component:
   - component: {fileID: 160263218}
   - component: {fileID: 160263217}
+  - component: {fileID: 160263221}
+  - component: {fileID: 160263220}
+  - component: {fileID: 160263219}
   m_Layer: 0
   m_Name: Treant - NPC
-  m_TagString: Untagged
+  m_TagString: interObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,12 +202,63 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160263216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3398798, y: 4.0914187, z: 2.0334556}
+  m_LocalPosition: {x: -0.1201202, y: 3.7314186, z: 2.0334556}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1611425977}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160263219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160263216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2324668f595db44bb23ece53dbc7ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talks: 1
+  message: Pssst! That mole over there seems kinda fishy..
+--- !u!50 &160263220
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160263216}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!58 &160263221
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160263216}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.042036224, y: -0.015487003}
+  serializedVersion: 2
+  m_Radius: 0.2634508
 --- !u!1 &338344633
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +340,7 @@ GameObject:
   - component: {fileID: 395310558}
   - component: {fileID: 395310557}
   - component: {fileID: 395310562}
+  - component: {fileID: 395310563}
   m_Layer: 0
   m_Name: 'Player '
   m_TagString: Untagged
@@ -429,6 +484,20 @@ CircleCollider2D:
   m_Offset: {x: -0.0022294165, y: -0.09879666}
   serializedVersion: 2
   m_Radius: 0.034396626
+--- !u!114 &395310563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395310556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3488e4f333bd0a4494d01055e19c67f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentInterObj: {fileID: 0}
+  currentInterObjScript: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,10 +1122,12 @@ GameObject:
   - component: {fileID: 1098370878}
   - component: {fileID: 1098370877}
   - component: {fileID: 1098370876}
+  - component: {fileID: 1098370880}
+  - component: {fileID: 1098370881}
   - component: {fileID: 1098370879}
   m_Layer: 0
   m_Name: Mole - NPC
-  m_TagString: Untagged
+  m_TagString: interObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1139,13 +1210,43 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098370875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.08712, y: -1.8775816, z: 2.0334556}
+  m_LocalPosition: {x: -4.0501204, y: -2.0085812, z: 2.0334556}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1611425977}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1098370879
+--- !u!114 &1098370879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098370875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2324668f595db44bb23ece53dbc7ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  talks: 1
+  message: Tjackballe
+--- !u!58 &1098370880
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098370875}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.10807953, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.19192052
+--- !u!50 &1098370881
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -1160,12 +1261,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!1 &1138927682
 GameObject:
   m_ObjectHideFlags: 3
@@ -6425,7 +6526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1611425977}
   m_Layer: 0
-  m_Name: Players
+  m_Name: Characters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

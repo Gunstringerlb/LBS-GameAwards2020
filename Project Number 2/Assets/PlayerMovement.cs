@@ -12,12 +12,26 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator; 
 
     Vector2 movement; 
+    Vector2 movementDelta;
 
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+
+        if(movement.sqrMagnitude != 0)
+        {
+            movementDelta = movement;
+        }
+        
+
+
+        //Idle values
+        animator.SetFloat("IdleHorizontal", movementDelta.x);
+        animator.SetFloat("IdleVertical", movementDelta.y);
+
+        //MovementValues
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
