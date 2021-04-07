@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dialog : MonoBehaviour
+public class ChatBubble : MonoBehaviour
 {
-   void MoleDialog()
-    {
-
-    }
+    
 }
+

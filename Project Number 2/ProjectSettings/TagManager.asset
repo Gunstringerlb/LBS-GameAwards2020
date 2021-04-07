@@ -14,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Characters
   - 
   - 
   - 
@@ -42,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer
+  - name: Characters
     uniqueID: 1149512963
+    locked: 0
+  - name: Text
+    uniqueID: 2245472301
     locked: 0
