@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 160263222}
   m_Layer: 8
   m_Name: Treant-NPC
-  m_TagString: interObject
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -549,10 +549,9 @@ GameObject:
   - component: {fileID: 395310558}
   - component: {fileID: 395310557}
   - component: {fileID: 395310562}
-  - component: {fileID: 395310563}
   m_Layer: 8
   m_Name: 'Player '
-  m_TagString: Untagged
+  m_TagString: interObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -693,20 +692,6 @@ CircleCollider2D:
   m_Offset: {x: -0.0022294165, y: -0.09879666}
   serializedVersion: 2
   m_Radius: 0.034396626
---- !u!114 &395310563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 395310556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3488e4f333bd0a4494d01055e19c67f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentInterObj: {fileID: 0}
-  currentInterObjScript: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,8 +1494,8 @@ GameObject:
   - component: {fileID: 1098370876}
   - component: {fileID: 1098370880}
   - component: {fileID: 1098370881}
-  - component: {fileID: 1098370879}
   - component: {fileID: 1098370882}
+  - component: {fileID: 1098370883}
   m_Layer: 8
   m_Name: Mole-NPC
   m_TagString: interObject
@@ -1602,22 +1587,6 @@ Transform:
   m_Father: {fileID: 1611425977}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1098370879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098370875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2324668f595db44bb23ece53dbc7ada, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chatBubble: {fileID: 882935800}
-  displayText: {fileID: 345267714}
-  talks: 1
-  message: Hello there!
 --- !u!58 &1098370880
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1631,9 +1600,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10807953, y: 0}
+  m_Offset: {x: 0.13, y: 0}
   serializedVersion: 2
-  m_Radius: 0.19192052
+  m_Radius: 0.22
 --- !u!50 &1098370881
 Rigidbody2D:
   serializedVersion: 4
@@ -1681,6 +1650,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.18037023, y: 0.24}
   m_EdgeRadius: 0
+--- !u!114 &1098370883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098370875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80fd896961b25b4f83c4428366d045f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popUp: You fucking did it!
+  popSystem: {fileID: 275378802}
 --- !u!1 &1112154721
 GameObject:
   m_ObjectHideFlags: 0

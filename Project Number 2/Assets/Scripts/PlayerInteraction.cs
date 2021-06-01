@@ -10,6 +10,8 @@ public class PlayerInteraction : MonoBehaviour
     void Update()
     {
         if(Input.GetButtonDown ("Interact") && currentInterObj) {
+            
+            
             // Gör något med objektet
             currentInterObj.SendMessage("DoInteraction");
 

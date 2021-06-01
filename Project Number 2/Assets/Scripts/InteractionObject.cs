@@ -17,7 +17,7 @@ public class InteractionObject : MonoBehaviour
     public void Talk()
     {
         Debug.Log(message);
-        // Visar meddelnadet i konsolen
+        // Visar meddelandet i konsolen
 
         displayText.text = message;
 
@@ -26,7 +26,7 @@ public class InteractionObject : MonoBehaviour
 
    public void DoInteraction() 
     { 
-        // Plockade up och förvarade i Inventory
+        // Plockade upp och förvarade i Inventory
     }
 
     IEnumerator TalkCoRoutine()

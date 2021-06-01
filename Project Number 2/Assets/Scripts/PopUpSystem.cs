@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DialogSystem : MonoBehaviour
+public class PopUpSystem: MonoBehaviour
 {
     public GameObject dialogBox; // Detta kommer skapa en referens till ett GameObject som kommer agera som bakgrund till dialogboxen
     public Animator animator; // Detta skapar en referens till PopUpAnimationen till dialogboxen
@@ -13,7 +13,7 @@ public class DialogSystem : MonoBehaviour
     {
         dialogBox.SetActive(true);
         dialogText.text = text;
-        animator.SetTrigger("pop");
+        animator.SetBool("pop", true);
     }
 
 }
